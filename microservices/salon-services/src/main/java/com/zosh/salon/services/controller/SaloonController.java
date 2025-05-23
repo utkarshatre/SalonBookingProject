@@ -6,10 +6,7 @@ import com.zosh.salon.services.payloadDTO.SaloonDTO;
 import com.zosh.salon.services.payloadDTO.UserDTO;
 import com.zosh.salon.services.services.SaloonService;
 import jakarta.validation.Valid;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,8 +18,8 @@ import java.util.List;
 public class SaloonController {
 
     private final SaloonService saloonService ;
-@PostMapping("/")
-    public ResponseEntity<SaloonDTO> createUser(@RequestBody @Valid SaloonDTO sDto){
+    @PostMapping("/")
+    public ResponseEntity<SaloonDTO> createSaloonApi(@RequestBody @Valid SaloonDTO sDto){
     UserDTO uDto = new UserDTO();
     uDto.setId(1L);
       Saloon createdSaloon=  saloonService.createSaloon(sDto,uDto);
@@ -31,12 +28,26 @@ public class SaloonController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<SaloonDTO> updateSaloon(@RequestBody @Valid SaloonDTO sDto,
+    public ResponseEntity<SaloonDTO> updateSaloonApi(@RequestBody @Valid SaloonDTO sDto,
                                                   @PathVariable("id") Long saloonId) throws Exception{
     UserDTO uDto = new UserDTO();
     uDto.setId(1L);
     Saloon saloonUpdate =saloonService.updateSaloon(sDto,uDto,saloonId);
     SaloonDTO saloonDTO1 = SaloonMapper.mapToSaloon(saloonUpdate);
     return ResponseEntity.ok(saloonDTO1);
+    }
+@GetMapping("/")
+    public ResponseEntity<List<SaloonDTO>> getSaloons(){
+        List<Saloon> allSaloons = saloonService.getAllSaloon();
+//        line 43 to 44 for cenversion of sallon to saloonDto,as its a list
+//        SaloonDTO saloonDTO1 = SaloonMapper.mapToSaloon((Saloon) allSaloons);
+//        return ResponseEntity.ok(saloonDTO1);
+//        line 46 to end for convertion of same using stream, as its a list
+    List<SaloonDTO> saloonDTOLists = allSaloons.stream().map((item)->{
+        SaloonDTO mappedSaloonDto= SaloonMapper.mapToSaloon(item);
+        return  mappedSaloonDto;
+    }
+    ).toList();
+    return ResponseEntity.ok(saloonDTOLists);
     }
 }

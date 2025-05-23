@@ -68,7 +68,7 @@ return saloonRepo.save(s_obj);
 
     @Override
     public Saloon getSaloonByOwnerId(Long ownerId) {
-        return saloonRepo.findByOwnerID(ownerId);
+        return saloonRepo.findByOwnerId(ownerId);
     }
 
     @Override
