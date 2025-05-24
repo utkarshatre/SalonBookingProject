@@ -6,6 +6,7 @@ import com.zosh.salon.services.payloadDTO.UserDTO;
 import com.zosh.salon.services.repo.SaloonRepo;
 import com.zosh.salon.services.services.SaloonService;
 import lombok.RequiredArgsConstructor;
+import org.apache.tomcat.util.descriptor.web.WebXml;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -35,7 +36,10 @@ return saloonRepo.save(s_obj);
     @Override
     public Saloon updateSaloon(SaloonDTO saloon_Dto, UserDTO user_Dto, Long saloonId) throws Exception {
         Saloon exsisting_Saloon = saloonRepo.findById(saloonId).orElse(null);
-        if (exsisting_Saloon != null && saloon_Dto.getOwnerId().equals(user_Dto.getId())) {
+        if(!saloon_Dto.getOwnerId().equals(user_Dto.getId())){
+            throw new Exception("You are not allowed to update the sallon");
+        }
+        if (exsisting_Saloon != null) {
             exsisting_Saloon.setName(saloon_Dto.getName());
             exsisting_Saloon.setCity(saloon_Dto.getCity());
             exsisting_Saloon.setAddress(saloon_Dto.getAddress());
@@ -51,7 +55,7 @@ return saloonRepo.save(s_obj);
     }
 
     @Override
-    public List<Saloon> getAllSaloon() {
+    public List<Saloon> getAllSaloon() throws Exception {
         return saloonRepo.findAll();
     }
 

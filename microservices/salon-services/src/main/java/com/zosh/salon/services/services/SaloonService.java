@@ -13,7 +13,7 @@ import java.util.List;
 public interface SaloonService {
     Saloon createSaloon(SaloonDTO saloon_Dto, UserDTO user_Dto);
     Saloon updateSaloon(SaloonDTO saloon_Dto, UserDTO user_Dto, Long saloonId) throws Exception;
-    List<Saloon> getAllSaloon();
+    List<Saloon> getAllSaloon() throws Exception;
     Saloon getSaloonById(Long SaloonId)  throws Exception;
     Saloon getSaloonByOwnerId(Long ownerId);
     List<Saloon> searchSaloonBYCity(String city);

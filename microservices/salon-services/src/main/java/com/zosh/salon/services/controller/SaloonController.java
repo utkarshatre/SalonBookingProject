@@ -18,6 +18,8 @@ import java.util.List;
 public class SaloonController {
 
     private final SaloonService saloonService ;
+
+//http:'//localhost:8081/api.saloons/
     @PostMapping("/")
     public ResponseEntity<SaloonDTO> createSaloonApi(@RequestBody @Valid SaloonDTO sDto){
     UserDTO uDto = new UserDTO();
@@ -27,6 +29,7 @@ public class SaloonController {
       return ResponseEntity.ok(saloonDTO1);
     }
 
+//    http:'//localhost:8081/api.saloons/2
     @PatchMapping("/{id}")
     public ResponseEntity<SaloonDTO> updateSaloonApi(@RequestBody @Valid SaloonDTO sDto,
                                                   @PathVariable("id") Long saloonId) throws Exception{
@@ -36,8 +39,10 @@ public class SaloonController {
     SaloonDTO saloonDTO1 = SaloonMapper.mapToSaloon(saloonUpdate);
     return ResponseEntity.ok(saloonDTO1);
     }
-@GetMapping("/")
-    public ResponseEntity<List<SaloonDTO>> getSaloons(){
+
+//http:'//localhost:8081/api.saloons
+    @GetMapping()
+    public ResponseEntity<List<SaloonDTO>> getSaloons() throws Exception{
         List<Saloon> allSaloons = saloonService.getAllSaloon();
 //        line 43 to 44 for cenversion of sallon to saloonDto,as its a list
 //        SaloonDTO saloonDTO1 = SaloonMapper.mapToSaloon((Saloon) allSaloons);
@@ -49,5 +54,37 @@ public class SaloonController {
     }
     ).toList();
     return ResponseEntity.ok(saloonDTOLists);
+    }
+
+    ///http:'//localhost:8081/api.saloons/2
+    @GetMapping("/{id}")
+    public ResponseEntity<SaloonDTO> getSaloonsById(@PathVariable("id") Long saloonId) throws  Exception{
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId(1L);
+        Saloon saloonData  = saloonService.getSaloonById(saloonId) ;
+        SaloonDTO saloonDTO = SaloonMapper.mapToSaloon(saloonData);
+        return ResponseEntity.ok(saloonDTO);
+    }
+
+//    search?city=mumbai
+//    http://localhost:8081/api.saloons/search?city=mumbai
+    @GetMapping("/search") //we ont provide owner ID becuase it will comes from jwt token
+    public ResponseEntity<List<SaloonDTO>> getSaloonListByCity(@RequestParam("city") String city) throws Exception{
+        List<Saloon> saloons = saloonService.searchSaloonBYCity(city);
+        List<SaloonDTO> saloonDTO = saloons.stream().map((item)->{
+            SaloonDTO saloonDTO1 = SaloonMapper.mapToSaloon(item);
+            return saloonDTO1;
+        }).toList();
+        return ResponseEntity.ok(saloonDTO);
+    }
+
+    ///http:'//localhost:8081/api.saloons/owner/2
+    @GetMapping("/owner/{owner}")
+    public ResponseEntity<SaloonDTO> getSaloonsByOwnerId(@PathVariable("owner") Long saloonId) throws  Exception{
+        UserDTO userDTO = new UserDTO();
+        userDTO.setId(1L);
+        Saloon saloonData  = saloonService.getSaloonByOwnerId(saloonId) ;
+        SaloonDTO saloonDTO = SaloonMapper.mapToSaloon(saloonData);
+        return ResponseEntity.ok(saloonDTO);
     }
 }

@@ -22,7 +22,7 @@ public class Saloon {
     private String phoneNumber;
     @Column(nullable = false)
     private String email;
-    @Column(nullable = false)
+    @Column(nullable = false)   
     private String city;
     @Column(nullable = false)
     private Long ownerId;
