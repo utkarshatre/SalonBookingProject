@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64696c7d-3167-4e2f-9df0-a6305fd9b08e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/controller/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/dto/CategoryDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/dto/SaloonDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/dto/ServiceDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/repo/ServiceOfferingRepo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/service/ServiceOfferingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/service/imp/ServiceOfferingImp.java" afterDir="false" />
+    <list default="true" id="64696c7d-3167-4e2f-9df0-a6305fd9b08e" name="Changes" comment="Changes in ServiceOFfering">
+      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/controller/SaloonServiceOfferingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/controller/ServiceOfferingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,11 +125,24 @@
       <updated>1748226167664</updated>
       <workItem from="1748226171160" duration="2037000" />
       <workItem from="1748271636473" duration="6395000" />
-      <workItem from="1749003591146" duration="6667000" />
+      <workItem from="1749003591146" duration="11668000" />
     </task>
+    <task id="LOCAL-00001" summary="Changes in ServiceOFfering">
+      <option name="closed" value="true" />
+      <created>1749091103847</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749091103847</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes in ServiceOFfering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes in ServiceOFfering" />
   </component>
 </project>
