@@ -4,9 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64696c7d-3167-4e2f-9df0-a6305fd9b08e" name="Changes" comment="Changes in ServiceOFfering">
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/controller/SaloonServiceOfferingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/microservices/service-offering/src/main/java/com/zosh/service_offering/controller/ServiceOfferingController.java" afterDir="false" />
+    <list default="true" id="06af33fb-103d-4eb4-a713-b70a3d7790b1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/domain/BookingStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/dto/BookingRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/dto/SaloonDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/dto/ServiceDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/modal/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices/booking-service/src/main/java/com/zosh/service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -24,51 +35,57 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;utkarshatre&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "utkarshatre"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/utkarshatre/SalonBookingProject&quot;,
-    &quot;accountId&quot;: &quot;7186f5b4-09b2-4a87-8f2a-24dbcd84711f&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/utkarshatre/SalonBookingProject",
+    "accountId": "7186f5b4-09b2-4a87-8f2a-24dbcd84711f"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2xc8mudeVUOyW5vsaqB4LTifubm" />
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2y7BByy8cndp70lwTWvYwQ9974p" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ServiceOfferingApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SpringBootProjects/SalonBookingProject/microservices/service-offering/src/main/java/com/zosh/service_offering/dto&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.BookingServiceApplication.executor": "Run",
+    "Spring Boot.CategoryServiceApplication.executor": "Run",
+    "Spring Boot.SalonServicesApplication.executor": "Run",
+    "Spring Boot.ServiceOfferingApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/SpringBootProjects/SalonBookingProject/microservices/booking-service/src/main/java/com/zosh/dto",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\SpringBootProjects\SalonBookingProject\microservices\service-offering\src\main\java\com\zosh\service_offering\dto" />
+      <recent name="D:\SpringBootProjects\SalonBookingProject\microservices\booking-service\src\main\java\com\zosh\dto" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zosh.dto" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -81,7 +98,15 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ServiceOfferingApplication">
+  <component name="RunManager" selected="Spring Boot.BookingServiceApplication">
+    <configuration name="BookingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="booking-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.zosh.BookingServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CategoryServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="category-service" />
@@ -118,31 +143,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="64696c7d-3167-4e2f-9df0-a6305fd9b08e" name="Changes" comment="" />
-      <created>1748226167664</created>
+      <changelist id="06af33fb-103d-4eb4-a713-b70a3d7790b1" name="Changes" comment="" />
+      <created>1749175603391</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1748226167664</updated>
-      <workItem from="1748226171160" duration="2037000" />
-      <workItem from="1748271636473" duration="6395000" />
-      <workItem from="1749003591146" duration="11668000" />
+      <updated>1749175603391</updated>
+      <workItem from="1749175607219" duration="10038000" />
     </task>
-    <task id="LOCAL-00001" summary="Changes in ServiceOFfering">
-      <option name="closed" value="true" />
-      <created>1749091103847</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1749091103847</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changes in ServiceOFfering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in ServiceOFfering" />
   </component>
 </project>
