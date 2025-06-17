@@ -1,8 +1,10 @@
 package com.zosh.dto;
 
 import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
 public class ServiceDTO {
     private Long id;
     private String name;

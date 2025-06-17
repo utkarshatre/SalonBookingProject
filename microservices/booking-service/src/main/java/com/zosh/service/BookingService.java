@@ -12,11 +12,11 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 
-public interface BookingService {
-    Booking createBookingr(BookingRequest bookingRequest, UserDTO userDTO, SaloonDTO saloonDTO, Set<ServiceDTO> serviceDTOS);
+public interface BookingService  {
+    Booking createBookingr(BookingRequest bookingRequest, UserDTO userDTO, SaloonDTO saloonDTO, Set<ServiceDTO> serviceDTOS) throws Exception;
     List<Booking> getBookingByCustomerId(Long customerId);
     List<Booking> getBookingBySaloonId(Long saloonId);
-    Booking getBookingById(Long id);
+    Booking getBookingById(Long id) throws Exception;
 Booking updateBooking(Long bookingID, BookingStatus status);
 List<Booking> getBookingByDate(LocalDate localDate,Long sallonID);
 SaloonReport getSaloonReport(Long saloonID);

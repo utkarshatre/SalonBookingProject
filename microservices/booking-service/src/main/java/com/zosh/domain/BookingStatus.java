@@ -1,6 +1,6 @@
 package com.zosh.domain;
 
-public enum BookingStatus {
+public enum  BookingStatus {
     PENDING,
     CONFIRMED,
     CANCEL
