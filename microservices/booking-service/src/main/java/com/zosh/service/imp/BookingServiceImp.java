@@ -103,8 +103,10 @@ private final BookingRepo bookingRepo;
         return null;
     }
 
+
+
     @Override
-    public List<Booking> getBookingByDate(LocalDate localDate, Long sallonID) {
+    public List<Booking> getBookingByDate(LocalDateTime localDate, Long sallonID) {
 List<Booking> allBookings = getBookingBySaloonId(sallonID);
 if(localDate!=null){
    allBookings.stream().filter(booking->booking.getStartTime().toLocalDate().equals(localDate)||booking.getEndTime().toLocalDate().equals(localDate)).collect(Collectors.toList());

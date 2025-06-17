@@ -9,6 +9,7 @@ import com.zosh.modal.Booking;
 import com.zosh.modal.SaloonReport;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -18,7 +19,7 @@ public interface BookingService  {
     List<Booking> getBookingBySaloonId(Long saloonId);
     Booking getBookingById(Long id) throws Exception;
 Booking updateBooking(Long bookingID, BookingStatus status);
-List<Booking> getBookingByDate(LocalDate localDate,Long sallonID);
+List<Booking> getBookingByDate(LocalDateTime localDate, Long sallonID);
 SaloonReport getSaloonReport(Long saloonID);
 
 }
